@@ -13,4 +13,5 @@ in {
     enable = true;
     xwayland.enable = true;
   };
+  programs.niri.enable = enabled.enableNiri;
 }
