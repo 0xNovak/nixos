@@ -9,6 +9,7 @@
     ../../modules/desktop.nix
     ../../modules/laptop_services.nix
     ../../modules/fonts.nix
+    ../../modules/shared_.nix
   ];
   networking.hostName = "nixos"; # Define your hostname.
 
