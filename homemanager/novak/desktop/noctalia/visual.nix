@@ -6,9 +6,9 @@
       source = "builtin";
       templates = {
         enable_builtin_templates = true;
-        builtin_ids = ["gtk3" "gtk4" "ghostty" "hyprland" "niri"];
+        builtin_ids = ["gtk3" "gtk4" "ghostty" "btop" "niri"];
         enable_community_templates = true;
-        community_ids = ["bat" "lazygit" "fuzzel"];
+        community_ids = ["bat" "lazygit" "fuzzel" "zellij" "yazi" "fastfetch" "discrord" "darktable"];
       };
     };
     widget = {

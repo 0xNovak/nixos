@@ -9,6 +9,7 @@
     ./ghostty.nix
     ./obsidian.nix
     ./messeges.nix
+    ./yazi.nix
   ];
   programs.mpv.enable = true;
 
@@ -19,5 +20,6 @@
     ++ (import ./homepkgs_imports/modernUnix.nix {inherit pkgs;})
     ++ (import ./homepkgs_imports/dev.nix {inherit pkgs;})
     ++ (import ./homepkgs_imports/photoediting.nix {inherit pkgs;})
+    ++ (import ./homepkgs_imports/utility.nix {inherit pkgs;})
     ++ (import ../desktop/pkgDeps.nix {inherit pkgs lib config;});
 }

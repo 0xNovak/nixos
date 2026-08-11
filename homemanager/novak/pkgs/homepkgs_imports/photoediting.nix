@@ -1,6 +1,8 @@
 {pkgs}:
 with pkgs; [
   darktable
-  gimp # recomended to install photogimp
+  krita
   exiftool
+  gnome-obfuscate
+  switcheroo
 ]
