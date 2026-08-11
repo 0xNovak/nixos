@@ -28,7 +28,7 @@
 
       start = ["launcher" "spacer_3" "group:g2"];
       center = ["grout:g1" "spacer_2" "clock" "notifications" "spacer_3" "weahter"];
-      end = ["tray" "clipboard" "group:g3" "control-center" "session"];
+      end = ["tray" "clipboard" "group:g3" "battery" "control-center" "session"];
 
       capsule_group = [
         {
@@ -48,7 +48,7 @@
         {
           enabled = true;
           id = "g3";
-          members = ["bluetooth" "network" "spacer_3" "volume" "brightness" "battery"];
+          members = ["bluetooth" "network" "spacer_3" "volume" "brightness"];
           opacity = 1.0;
           padding = 6.0;
         }
