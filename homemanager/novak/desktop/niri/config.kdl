@@ -75,7 +75,7 @@ hotkey-overlay {
 }
 // prefer-no-csd
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/Screenshot__%Y-%m-%d %H-%M-%S.png"
 
 animations {
     // off
@@ -248,6 +248,7 @@ binds {
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
+    Ctrl+P { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
