@@ -1,6 +1,5 @@
 {pkgs}:
 with pkgs; [
-  notion-app
   onlyoffice-desktopeditors
 
   localsend

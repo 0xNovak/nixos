@@ -6,6 +6,7 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       jetbrains-mono
+      corefonts
     ];
     fontconfig = {
       enable = false;
