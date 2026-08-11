@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./neovim.nix
     ./librewolf.nix
@@ -10,5 +14,6 @@
       doublecmd
     ]
     ++ (import ./modernUnix.nix {inherit pkgs;})
-    ++ (import ./dev.nix {inherit pkgs;});
+    ++ (import ./dev.nix {inherit pkgs;})
+    ++ (import ../desktop/pkgDeps.nix {inherit pkgs lib config;});
 }

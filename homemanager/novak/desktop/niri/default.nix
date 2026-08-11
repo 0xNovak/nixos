@@ -1,10 +1,4 @@
 {
-  lib,
-  config,
-  ...
-}: {
-  # config = lib.mkIf config.de.enableNiri {
-  xdg.configFile."niri/".source = ./config;
-  # };
+  xdg.configFile."niri/config.kdl".source = ./config.kdl;
   imports = [../dunst.nix];
 }

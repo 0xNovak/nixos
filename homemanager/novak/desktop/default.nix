@@ -1,8 +1,7 @@
 {...}: {
   imports = [
-    ./hyprland
+    # ./hyprland
     ./niri
     ./noctalia
-    ./pkgDeps.nix
   ];
 }
