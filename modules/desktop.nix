@@ -9,9 +9,5 @@ in {
   services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
 
-  programs.hyprland = lib.mkIf enabled.enableHypr {
-    enable = true;
-    xwayland.enable = true;
-  };
   programs.niri.enable = enabled.enableNiri;
 }
