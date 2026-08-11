@@ -1,10 +1,10 @@
 {inputs, ...}: {
   imports = [
     inputs.nvf.homeManagerModules.default
-    ./nvim/editor.nix
-    ./nvim/plugins
-    ./nvim/lsp
-    ./nvim/keymaps
+    ./editor.nix
+    ./plugins
+    ./lsp
+    ./keymaps
   ];
   programs.nvf.enable = true;
 }

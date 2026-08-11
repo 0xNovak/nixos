@@ -6,6 +6,7 @@
     tree = "eza -T";
     tr = "eza -Tl";
     cd = "z";
+    ping = "gping";
 
     v = "nvim";
     vimdiff = "nvim -d";
@@ -36,7 +37,7 @@
       size = 10000;
       ignoreAllDups = true;
       path = "$HOME/.local/state/zsh/history";
-      ignorePatterns = ["rm *" "pkill *" "cp *" "mv *"];
+      ignorePatterns = ["rm *" "pkill *" "cp *" "mv *" "git commit -m"];
     };
   };
   programs.zoxide = {

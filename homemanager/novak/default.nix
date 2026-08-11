@@ -20,7 +20,7 @@
     enable = true;
     settings.user = {
       name = "0xNovak";
-      email = "nowackiwik@gmail.com";
+      email = "181787300+0xNovak@users.noreply.github.com";
     };
   };
 }

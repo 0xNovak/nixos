@@ -46,13 +46,13 @@
         mermaid-cli
       ]
       ++ [
-        clang
         libclang
         clang-tools
+        clang
         cmake
         ninja
         rustup
       ]
-      ++ (import ./../dev.nix {inherit pkgs;});
+      ++ (import ../homepkgs_imports/dev.nix {inherit pkgs;});
   };
 }
