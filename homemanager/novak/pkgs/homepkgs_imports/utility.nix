@@ -1,6 +1,7 @@
 {pkgs}:
 with pkgs; [
   onlyoffice-desktopeditors
+  foliate
 
   localsend
   croc
