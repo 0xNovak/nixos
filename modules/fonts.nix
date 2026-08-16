@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   fonts = {
+    enableDefaultPackages = true;
     packages = with pkgs; [
       nerd-fonts._3270
       noto-fonts
@@ -9,13 +10,13 @@
       corefonts
     ];
     fontconfig = {
-      enable = false;
-      defaultFonts = {
-        monospace = ["3270 Nerd Font"];
-        sansSerif = ["Noto Sans"];
-        serif = ["Noto Sherif"];
-        emoji = ["Noto Color Emoji"];
-      };
+      enable = true;
+      # defaultFonts = {
+      #   monospace = ["3270 Nerd Font"];
+      #   sansSerif = ["Noto Sans"];
+      #   serif = ["Noto Sherif"];
+      #   emoji = ["Noto Color Emoji"];
+      # };
     };
   };
 }

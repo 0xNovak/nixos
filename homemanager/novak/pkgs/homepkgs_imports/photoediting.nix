@@ -5,4 +5,6 @@ with pkgs; [
   exiftool
   gnome-obfuscate
   switcheroo
+  timg
+  qview
 ]

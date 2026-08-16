@@ -10,6 +10,7 @@
     ./obsidian.nix
     ./messeges.nix
     ./yazi.nix
+    ./spotify.nix
   ];
   programs.mpv.enable = true;
 
