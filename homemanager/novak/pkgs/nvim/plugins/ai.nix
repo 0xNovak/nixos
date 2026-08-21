@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings.assistant.copilot = {
+  programs.nvf.settings.vim.assistant.copilot = {
     enable = true; # loads copilot.lua itself — required
     cmp.enable = false; # leave off — this is the nvim-cmp path, not blink
     setupOpts = {
@@ -7,7 +7,7 @@
       suggestion.enabled = false;
     };
   };
-  programs.nvf.settings = {
+  programs.nvf.settings.vim = {
     extraPlugins = {
       plenary-nvim = {
         package = pkgs.vimPlugins.plenary-nvim;

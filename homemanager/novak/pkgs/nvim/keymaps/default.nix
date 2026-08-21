@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings = {
+  programs.nvf.settings.vim = {
     vendoredKeymaps.enable = false;
     globals.mapleader = " ";
     keymaps =

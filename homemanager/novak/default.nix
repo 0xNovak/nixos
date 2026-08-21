@@ -10,7 +10,6 @@
     };
   };
   imports = [
-    ../../modules/shared_.nix
     ./desktop
     ./pkgs
     ./shell.nix

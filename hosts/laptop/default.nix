@@ -9,11 +9,8 @@
     ../../modules/desktop.nix
     ../../modules/laptop_services.nix
     ../../modules/fonts.nix
-    ../../modules/shared_.nix
   ];
   networking.hostName = "nixos"; # Define your hostname.
-
-  de.enableNiri = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."novak" = {

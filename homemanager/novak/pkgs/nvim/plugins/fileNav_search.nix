@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings = {
+  programs.nvf.settings.vim = {
     telescope.enable = true;
     filetree.neo-tree = {
       enable = true;

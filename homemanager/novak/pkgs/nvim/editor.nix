@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings = {
+  programs.nvf.settings.vim = {
     # lazy.enable = false;
     lineNumberMode = "relNumber";
     visuals.nvim-web-devicons.enable = true;

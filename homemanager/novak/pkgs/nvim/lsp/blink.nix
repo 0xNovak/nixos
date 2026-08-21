@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings = {
+  programs.nvf.settings.vim = {
     autocomplete.nvim-cmp.enable = false;
     extraPlugins.blink-copilot.package = pkgs.vimPlugins.blink-copilot;
 

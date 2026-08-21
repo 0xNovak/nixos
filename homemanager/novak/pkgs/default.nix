@@ -11,6 +11,7 @@
     ./messeges.nix
     ./yazi.nix
     ./spotify.nix
+    ./uv.nix
   ];
   programs.mpv.enable = true;
 

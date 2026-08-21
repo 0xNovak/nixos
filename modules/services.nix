@@ -1,4 +1,4 @@
-{...}:{
+{...}: {
   security.rtkit.enable = true;
   services = {
     printing.enable = true; # cups
@@ -12,6 +12,6 @@
       wireplumber.enable = true;
     };
   };
-
+  programs.nix-ld.enable = true;
   services.openssh.enable = true;
 }

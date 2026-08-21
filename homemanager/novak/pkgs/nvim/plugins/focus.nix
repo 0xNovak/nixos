@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings.extraPlugins = {
+  programs.nvf.settings.vim.extraPlugins = {
     zen-mode = {
       package = pkgs.vimPlugins.zen-mode-nvim;
       setup = ''
