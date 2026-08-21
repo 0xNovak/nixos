@@ -1,3 +1,4 @@
+#collection for everything in <leader>b menu
 [
   {
     key = "<leader>bd";

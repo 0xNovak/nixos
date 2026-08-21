@@ -1,5 +1,5 @@
 {lib, ...}: {
-  programs.nvf.settings.vim.languages = {
+  programs.nvf.settings.languages = {
     clang = {
       enable = true;
       dap.enable = true;
@@ -22,5 +22,5 @@
       treesitter.enable = true;
     };
   };
-  # programs.nvf.settings.vim.lsp.servers."clangd".cmd = lib.mkForce ["clangd" "--background-index" "--compile-commands-dir=build"];
+  # programs.nvf.settings.lsp.servers."clangd".cmd = lib.mkForce ["clangd" "--background-index" "--compile-commands-dir=build"];
 }

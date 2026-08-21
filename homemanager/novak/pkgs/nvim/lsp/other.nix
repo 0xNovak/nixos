@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.languages = {
+  programs.nvf.settings.languages = {
     nix = {
       enable = true;
       lsp.enable = true;

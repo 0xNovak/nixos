@@ -1,3 +1,4 @@
+#collection for everything in <leader>x menu
 [
   {
     key = "<leader>xt";

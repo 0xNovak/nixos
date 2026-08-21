@@ -1,4 +1,4 @@
-{
+{...}:{
   imports = [
     ./ui.nix
     ./fileNav_search.nix

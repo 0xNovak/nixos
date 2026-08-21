@@ -1,4 +1,5 @@
 {inputs, ...}: {
+  programs.nvf.enable = true;
   imports = [
     inputs.nvf.homeManagerModules.default
     ./editor.nix
@@ -6,5 +7,4 @@
     ./lsp
     ./keymaps
   ];
-  programs.nvf.enable = true;
 }

@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.mini = {
+  programs.nvf.settings.mini = {
     pairs.enable = true;
     move.enable = true;
     surround.enable = true;

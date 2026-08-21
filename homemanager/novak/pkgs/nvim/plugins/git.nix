@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.git = {
+  programs.nvf.settings.git = {
     enable = true;
     gitsigns = {
       enable = true;
@@ -7,8 +7,7 @@
     };
     neogit.enable = true;
   };
-  programs.nvf.settings.vim = {
-    terminal.toggleterm.lazygit.enable = true;
+  programs.nvf.settings = {
     utility.oil-nvim.gitStatus.enable = true;
     utility.diffview-nvim.enable = true;
   };

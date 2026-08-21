@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings.vim = {
+  programs.nvf.settings = {
     autocomplete.nvim-cmp.enable = false;
     extraPlugins.blink-copilot.package = pkgs.vimPlugins.blink-copilot;
 
@@ -9,7 +9,7 @@
       sourcePlugins.emoji.enable = true;
       setupOpts = {
         signature.enabled = false;
-        sources.default = ["lsp" "path" "snippets" "buffer"];
+        sources.default = ["lsp" "path" "snippets" "buffer" "copilot"];
         sources.providers.copilot = {
           module = "blink-copilot";
           name = "Copilot";

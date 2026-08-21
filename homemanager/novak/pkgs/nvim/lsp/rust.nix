@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.languages = {
+  programs.nvf.settings.languages = {
     rust = {
       enable = true;
       treesitter.enable = true;

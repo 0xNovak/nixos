@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nvf.settings.vim = {
+  programs.nvf.settings = {
     # lazy.enable = false;
     lineNumberMode = "relNumber";
     visuals.nvim-web-devicons.enable = true;
@@ -46,13 +46,22 @@
         mermaid-cli
       ]
       ++ [
+        clang
         libclang
         clang-tools
-        clang
         cmake
         ninja
         rustup
       ]
-      ++ (import ../homepkgs_imports/dev.nix {inherit pkgs;});
+      ++ [
+        fzf
+        fd
+        ripgrep
+
+        wget
+        curl
+        wl-clipboard
+        wl-clipboard-x11
+      ];
   };
 }

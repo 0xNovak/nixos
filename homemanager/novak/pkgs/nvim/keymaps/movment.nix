@@ -1,5 +1,4 @@
 [
-  # buffer control
   {
     key = "<S-l>";
     mode = "n";
@@ -14,7 +13,6 @@
     silent = true;
     desc = "switch to prev buffer";
   }
-  # split control
   {
     key = "<C-h>";
     mode = "n";

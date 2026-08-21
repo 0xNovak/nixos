@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim = {
+  programs.nvf.settings = {
     notes.todo-comments = {
       enable = true;
       mappings = {
