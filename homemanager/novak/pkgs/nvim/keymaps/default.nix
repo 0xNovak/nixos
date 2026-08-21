@@ -6,8 +6,8 @@
       []
       ++ import ./_leader
       ++ import ./ai.nix
-      ++ import ./buffer
-      ++ import ./window
+      ++ import ./buffer.nix
+      ++ import ./window.nix
       ++ import ./find_file
       ++ import ./code.nix
       ++ import ./git.nix
