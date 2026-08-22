@@ -7,10 +7,10 @@
     ../../modules
     ../../modules/services.nix
     ../../modules/desktop.nix
-    ../../modules/laptop_services.nix
     ../../modules/fonts.nix
+    ../../modules/laptop_services.nix
   ];
-  networking.hostName = "nixos-port"; # Define your hostname.
+  networking.hostName = "nixos-pc"; # Define your hostname.
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."novak" = {
@@ -36,13 +36,7 @@
     graphics.enable32Bit = true;
     nvidia = {
       modesetting.enable = true;
-      powerManagement.enable = true;
       open = false;
-      prime = {
-        offload.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
     };
   };
   boot.kernelParams = [
