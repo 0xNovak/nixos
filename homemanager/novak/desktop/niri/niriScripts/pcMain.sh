@@ -3,11 +3,10 @@
 set -u
 
 apply_outputs() {
-  local rout
-  local -a vout
-  local cout
-  local o1
-  local o2
+  local rout=""
+  local -a vout=()
+  local o1=""
+  local o2=""
   rout="$(niri msg outputs)"
   rout="$(grep "Output" <<<"$rout")"
 
@@ -64,10 +63,9 @@ apply_outputs() {
 last_state=""
 while true; do
   cur_state="$(niri msg --json outputs | jq -S -c '[.[] | {make, model, serial}] | sort_by(.make, .model, .serial)')"
-  echo cur_state: "$cur_state"
   if [[ "$cur_state" != "$last_state" ]]; then
     last_state="$cur_state"
     apply_outputs
   fi
-  sleep 10
+  sleep 15
 done

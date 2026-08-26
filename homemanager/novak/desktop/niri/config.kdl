@@ -53,7 +53,8 @@ output "HP Inc. HP E24d G4 3CQ15203QH"{
 }
 
 // pc
-spawn-at-startup "./pcMonitor.sh"
+spawn-at-startup "./niriScripts/pcMain.sh"
+
 layout {
     gaps 12
 
