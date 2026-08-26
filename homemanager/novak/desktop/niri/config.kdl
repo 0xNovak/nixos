@@ -82,56 +82,30 @@ layout {
     }
 }
 
+
+hotkey-overlay {
+    skip-at-startup
+}
+
 spawn-at-startup "noctalia"
 spawn-at-startup "dunst"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot__%Y-%m-%d %H-%M-%S.png"
-
-animations {
-    // off
-
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
-}
-
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-}
 
 window-rule {
     match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
-// window-rule {
-//     geometry-corner-radius 0
-//     clip-to-geometry true
-// }
 
 binds {
-    // Keys consist of modifiers separated by + signs, followed by an XKB key name
-    // in the end. To find an XKB name for a particular key, you may use a program
-    // like wev.
-    //
-    // "Mod" is a special modifier equal to Super when running on a TTY, and to Alt
-    // when running as a winit window.
-    //
-    // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
-
-    // Mod-Shift-/, which is usually the same as Mod-?,
-    // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "pkill fuzzel || fuzzel"; }
+
     Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
+    Super+G {spawn-sh "noctalia msg bar-toggle main"}
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -186,24 +160,11 @@ binds {
     Mod+Ctrl+WheelScrollRight { move-column-right; }
     Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
-    // Usually scrolling up and down with Shift in applications results in
-    // horizontal scrolling; these binds replicate that.
     Mod+Shift+WheelScrollDown      { focus-column-right; }
     Mod+Shift+WheelScrollUp        { focus-column-left; }
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    // Mod+TouchpadScrollDown { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
-    // Mod+TouchpadScrollUp   { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
-
-    // You can refer to workspaces by index. However, keep in mind that
-    // niri is a dynamic workspace system, so these commands are kind of
-    // "best effort". Trying to refer to a workspace index bigger than
-    // the current workspace count will instead refer to the bottommost
-    // (empty) workspace.
-    //
-    // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
-    // will all refer to the 3rd workspace.
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -232,8 +193,8 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-column-width-back; }
 
-    Mod+Ctrl+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    Mod+Alt+Shift+R { switch-preset-window-height; }
+    Mod+Alt+R { reset-window-height; }
 
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
@@ -250,9 +211,6 @@ binds {
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
-    // Toggle tabbed column display mode.
-    // Windows in this column will appear as vertical tabs,
-    // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
 
 
