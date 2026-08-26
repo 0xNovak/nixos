@@ -17,7 +17,7 @@
         after = ["plenary-nvim" "copilot-vim"]; # or copilot-lua, whichever backend you use
         setup = ''
           require("CopilotChat").setup({
-            model = 'gpt-4o',
+            model = 'auto',
             window = {
               layout = 'vertical',
               width = 0.4,
