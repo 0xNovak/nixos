@@ -24,7 +24,8 @@ input {
     warp-mouse-to-focus
 
 }
-// laptop main monitor
+
+//laptop
 output "eDP-1" {
     mode "1920x1080"
 
@@ -37,7 +38,7 @@ output "eDP-1" {
       off
     }
 }
-//laptop external "dzialka"
+//  external
 output "HP Inc. HP E24d G4 3CQ15203QH"{
     mode "1920x1080"
 
@@ -51,22 +52,8 @@ output "HP Inc. HP E24d G4 3CQ15203QH"{
     }
 }
 
-
-
-//pc main
-output "DP-1" {
-    mode "1920x1200"
-
-    scale 1
-    transform "normal"
-
-    position x=0 y=0
-
-    hot-corners {
-      off
-    }
-}
-
+// pc
+spawn-at-startup "./pcMonitor.sh"
 layout {
     gaps 12
 
