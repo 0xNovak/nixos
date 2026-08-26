@@ -32,7 +32,13 @@
       };
       treesitter.enable = true;
     };
-
+    bash = {
+      enable = true;
+      extraDiagnostics.enable = true;
+      lsp.enable = true;
+      format.enable = true;
+      treesitter.enable = true;
+    };
     json = {
       enable = true;
       lsp.enable = true;
