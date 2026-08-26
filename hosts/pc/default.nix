@@ -4,6 +4,7 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ./nvidia.nix
     ../../modules
     ../../modules/services.nix
     ../../modules/desktop.nix
@@ -29,21 +30,6 @@
   environment.systemPackages = with pkgs; [
     wget
   ];
-
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware = {
-    graphics.enable = true;
-    graphics.enable32Bit = true;
-    nvidia = {
-      modesetting.enable = true;
-      open = false;
-    };
-  };
-  boot.kernelParams = [
-    "nvidia-drm.modeset=1"
-    "nvidia-drm.fbdev=1"
-  ];
-  boot.blacklistedKernelModules = ["nouveau"];
 
   xdg.portal = {
     enable = true;
