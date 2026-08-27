@@ -4,6 +4,7 @@
     globals.mapleader = " ";
     keymaps =
       []
+      ++ import ./dev.nix
       ++ import ./_leader
       ++ import ./ai.nix
       ++ import ./buffer.nix

@@ -53,7 +53,7 @@ output "HP Inc. HP E24d G4 3CQ15203QH"{
 }
 
 // pc
-spawn-at-startup "./niriScripts/pcMain.sh"
+spawn-sh-at-startup "./niriScripts/pcMain.sh"
 
 layout {
     gaps 12
@@ -91,6 +91,10 @@ spawn-at-startup "noctalia"
 spawn-at-startup "dunst"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot__%Y-%m-%d %H-%M-%S.png"
+
+window-rule {
+    opacity 0.9
+}
 
 window-rule {
     match app-id=r#"librewolf$"# title="^Picture-in-Picture$"

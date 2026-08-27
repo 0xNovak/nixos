@@ -10,6 +10,15 @@
           "h" = "close_node";
         };
         filesystem.window.follow_current_file.enabled = true;
+        defaults.vimgrep_arguments = [
+          "\${pkgs.ripgrep.out}/bin/rg"
+          "--color=never"
+          "--no-heading"
+          "--with-filename"
+          "--line-number"
+          "--column"
+          "--smart-case"
+        ];
       };
     };
     utility.oil-nvim = {

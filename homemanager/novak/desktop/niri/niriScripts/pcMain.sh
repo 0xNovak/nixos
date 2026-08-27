@@ -33,6 +33,10 @@ apply_outputs() {
       mode 1720x1440@165.002
     niri msg output "$o2" \
       mode 1720x1440@165.002
+    niri msg output "$o1" \
+      scale 1.3
+    niri msg output "$o2" \
+      scale 1.3
 
   elif grep 'PNP(AOC) CU34G2XP 1Q1RBHA006084' <<<"$rout"; then
     for line in "${vout[@]}"; do
@@ -51,6 +55,8 @@ apply_outputs() {
     echo "PBP off"
     niri msg output "$o1" \
       mode 3440x1440@180.000
+    niri msg output "$o1" \
+      scale 1.4
     niri msg output "$o2" \
       off
   else
