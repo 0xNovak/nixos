@@ -47,7 +47,7 @@
     key = "K";
     mode = "n";
     lua = true;
-    action = "vim.lsp.buf.Hover";
+    action = "vim.lsp.buf.hover";
     silent = true;
     desc = "Hover";
   }
