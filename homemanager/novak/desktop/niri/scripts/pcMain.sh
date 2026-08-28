@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nix shell nixpkgs#bash nixpkgs#jq --command bash
+#!/usr/bin/env bash
 
 set -u
 
@@ -34,9 +34,9 @@ apply_outputs() {
     niri msg output "$o2" \
       mode 1720x1440@165.002
     niri msg output "$o1" \
-      scale 1.3
+      scale 1.2
     niri msg output "$o2" \
-      scale 1.3
+      scale 1.2
 
   elif grep 'PNP(AOC) CU34G2XP 1Q1RBHA006084' <<<"$rout"; then
     for line in "${vout[@]}"; do
@@ -56,7 +56,7 @@ apply_outputs() {
     niri msg output "$o1" \
       mode 3440x1440@180.000
     niri msg output "$o1" \
-      scale 1.4
+      scale 1.25
     niri msg output "$o2" \
       off
   else
@@ -65,7 +65,6 @@ apply_outputs() {
   fi
 
 }
-# Apply once at startup
 last_state=""
 while true; do
   cur_state="$(niri msg --json outputs | jq -S -c '[.[] | {make, model, serial}] | sort_by(.make, .model, .serial)')"
@@ -73,5 +72,5 @@ while true; do
     last_state="$cur_state"
     apply_outputs
   fi
-  sleep 15
+  sleep 20
 done

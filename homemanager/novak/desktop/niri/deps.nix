@@ -2,4 +2,5 @@
 with pkgs; [
   xwayland-satellite
   fuzzel
+  jq
 ]
