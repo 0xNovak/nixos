@@ -10,6 +10,7 @@
     ../../modules/desktop.nix
     ../../modules/fonts.nix
     ../../modules/laptop_services.nix
+    ../../modules/gaming.nix
   ];
   networking.hostName = "nixos-pc"; # Define your hostname.
 
