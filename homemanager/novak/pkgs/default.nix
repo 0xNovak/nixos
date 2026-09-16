@@ -6,11 +6,12 @@
   imports = [
     ./nvim
     ./librewolf.nix
-    ./ghostty.nix
+    ./kitty.nix
     ./obsidian.nix
     ./messeges.nix
     ./yazi.nix
     ./uv.nix
+    #./ghostty.nix
   ];
   programs.mpv.enable = true;
 

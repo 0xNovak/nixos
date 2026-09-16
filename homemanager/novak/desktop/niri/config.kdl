@@ -93,19 +93,26 @@ spawn-at-startup "dunst"
 screenshot-path "~/Pictures/Screenshots/Screenshot__%Y-%m-%d %H-%M-%S.png"
 
 window-rule {
-    opacity 0.9
+    opacity 0.966
 }
-
 window-rule {
-    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    match app-id="librewolf"  
+    opacity 1.0
+}
+window-rule {
+    match app-id="org.localsend.localsend_app"
     open-floating true
+}
+window-rule {
+    match app-id="kitty" title="v"
+    opacity 1
 }
 
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "pkill fuzzel || fuzzel"; }
 
     Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
