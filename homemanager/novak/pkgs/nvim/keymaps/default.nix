@@ -47,7 +47,7 @@
       ]
       ++ import ./QoL.nix
       ++ import ./code.nix
-      ++ import ./movment.ui.nix
+      ++ import ./movment.nix
       ++ import ./ui.nix
       ++ import ./diagnostics.nix;
   };
