@@ -1,5 +1,12 @@
 [
   {
+    key = "<leader>\\";
+    mode = ["n"];
+    action = "<CMD>ToggleTerm<CR>";
+    silent = true;
+    desc = "open terminal (float)";
+  }
+  {
     key = "<leader>|";
     mode = ["n"];
     action = "<CMD>vsplit<CR>";

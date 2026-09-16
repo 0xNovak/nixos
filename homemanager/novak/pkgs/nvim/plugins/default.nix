@@ -1,4 +1,4 @@
-{...}:{
+{...}: {
   imports = [
     ./ui.nix
     ./fileNav_search.nix
@@ -7,5 +7,6 @@
     ./mini.nix
     ./focus.nix
     ./ai.nix
+    ./terminal.nix
   ];
 }
