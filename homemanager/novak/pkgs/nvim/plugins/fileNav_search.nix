@@ -14,21 +14,21 @@ in {
       enable = true;
       setupOpts.defaults.vimgrep_arguments = vimgrepArgs;
     };
-  };
-  filetree.neo-tree = {
-    enable = true;
-    setupOpts = {
-      filesystem.window.mappings = {
-        "l" = "open";
-        "<CR>" = "open";
-        "h" = "close_node";
+    filetree.neo-tree = {
+      enable = true;
+      setupOpts = {
+        filesystem.window.mappings = {
+          "l" = "open";
+          "<CR>" = "open";
+          "h" = "close_node";
+        };
+        filesystem.window.follow_current_file.enabled = true;
+        defaults.vimgrep_arguments = vimgrepArgs;
       };
-      filesystem.window.follow_current_file.enabled = true;
-      defaults.vimgrep_arguments = vimgrepArgs;
     };
-  };
-  utility.oil-nvim = {
-    enable = true;
-    gitStatus.enable = true;
+    utility.oil-nvim = {
+      enable = true;
+      gitStatus.enable = true;
+    };
   };
 }

@@ -7,13 +7,16 @@
       lspSignature.enable = false;
       trouble.enable = true;
     };
+    debugger.nvim-dap = {
+      enable = true;
+      ui.enable = true;
+    };
     treesitter.addDefaultGrammars = true;
     formatter.conform-nvim.enable = true;
   };
 
   imports = [
     ./blink.nix
-    ./dap.nix
     ./clang.nix
     ./rust.nix
     ./webDev.nix
