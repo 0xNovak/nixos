@@ -7,6 +7,5 @@
     ./mini.nix
     ./focus.nix
     ./ai.nix
-    ./terminal.nix
   ];
 }
