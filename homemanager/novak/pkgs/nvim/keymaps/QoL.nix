@@ -1,34 +1,37 @@
 [
   {
-    key = "x";
-    mode = [
-      "n"
-      "v"
-    ];
-    action = "\"_x";
+    key = "<leader>ge";
+    mode = "n";
+    action = "<CMD>Neotree git_status toggle<CR>";
     silent = true;
-    desc = "delete char without yanking it";
+    desc = "toggle git neotree";
   }
   {
-    key = "<Esc>";
-    mode = ["n"];
-    action = "<CMD>noh<CR>";
+    key = "<leader>gg";
+    mode = "n";
+    action = "<CMD>Neogit<CR>";
     silent = true;
-    desc = "no highlight search";
+    desc = "enable neogit";
   }
   {
+    key = "<leader>gd";
     mode = "n";
-    key = "q:";
-    action = "<Nop>";
+    action = "<CMD>DiffviewOpen<CR>";
+    silent = true;
+    desc = "enable diffview";
   }
   {
-    mode = "n";
-    key = "q/";
-    action = "<Nop>";
+    key = "<leader>aa";
+    mode = ["n" "v"];
+    action = "<CMD>CopilotChatToggle<CR>";
+    silent = true;
+    desc = "Toggle ai chat";
   }
   {
-    mode = "n";
-    key = "q?";
-    action = "<Nop>";
+    key = "<leader>ap";
+    mode = ["n" "v"];
+    action = "<CMD>CopilotChatPrompts<CR>";
+    silent = true;
+    desc = "Open quick-prompts";
   }
 ]

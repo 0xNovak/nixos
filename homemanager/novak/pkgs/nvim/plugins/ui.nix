@@ -6,6 +6,7 @@
         "<leader>a" = "+ai";
         "<leader>f" = "+find/file";
         "<leader>c" = "+code";
+        "<leader>d" = "+debug";
         "<leader>b" = "+buffer";
         "<leader>w" = "+window";
         "<leader>g" = "+git";

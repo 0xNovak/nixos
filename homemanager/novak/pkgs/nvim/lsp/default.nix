@@ -13,6 +13,7 @@
 
   imports = [
     ./blink.nix
+    ./dap.nix
     ./clang.nix
     ./rust.nix
     ./webDev.nix

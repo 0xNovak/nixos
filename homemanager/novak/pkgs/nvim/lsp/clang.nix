@@ -22,5 +22,4 @@
       treesitter.enable = true;
     };
   };
-  # programs.nvf.settings.vim.lsp.servers."clangd".cmd = lib.mkForce ["clangd" "--background-index" "--compile-commands-dir=build"];
 }
