@@ -105,7 +105,7 @@ window-rule {
 }
 window-rule {
     match app-id="kitty" title="v"
-    opacity 1
+    opacity 1.0
 }
 
 
@@ -227,8 +227,8 @@ binds {
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
-    Ctrl+P { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Super+Ctrl+P { screenshot-screen; }
+    Super+Alt+Print { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
