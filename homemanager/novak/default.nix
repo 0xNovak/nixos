@@ -17,8 +17,8 @@
 
   # configuration for home modules
   conf = {
-    novak.enable = false;
-    kitty.enable = false;
+    novak.enable = true;
+    kitty.enable = true;
     ghostty.enable = false;
   };
 
