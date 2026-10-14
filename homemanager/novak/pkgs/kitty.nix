@@ -38,8 +38,8 @@ in {
       keybindings = {
         "ctrl+shift+enter" = "new_window_with_cwd";
         "ctrl+shift+t" = "new_tab_with_cwd";
-        "shift+f5" = "launch --cwd=current --type=background run-local-script build.sh";
         "f5" = "launch --cwd=current --type=background run-local-script run.sh";
+        "shift+f5" = "launch --cwd=current --type=background sh -c 'run-local-script build.sh && run-local-script run.sh || notify \"build failed\"'";
         "ctrl+shift+f5" = "launch --cwd=current --type=background run-local-script debug.sh";
       };
 
@@ -67,6 +67,7 @@ in {
             exec "./$script" "$@"
           else
             notify "No executable $script in $PWD"
+            exit 1
           fi
         '';
       })
