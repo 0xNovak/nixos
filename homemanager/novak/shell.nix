@@ -6,10 +6,10 @@
     tree = "eza -T";
     tr = "eza -Tl";
     cd = "z";
-    ping = "gping";
+    pingd = "ping nixos.org";
+    c = "clear";
 
     v = "nvim";
-    vimdiff = "nvim -d";
 
     "..." = "cd ../..";
   };

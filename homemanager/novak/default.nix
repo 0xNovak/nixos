@@ -15,6 +15,13 @@
     ./shell.nix
   ];
 
+  # configuration for home modules
+  conf = {
+    novak.enable = false;
+    kitty.enable = false;
+    ghostty.enable = false;
+  };
+
   programs.git = {
     enable = true;
     settings.user = {

@@ -26,42 +26,45 @@
 
     vimAlias = true;
     viAlias = true;
-    extraPackages = with pkgs;
-      [
-        git
-        lazygit
-      ]
-      ++ [
-        python3
-        lua
-        luarocks
-        luaPackages.tree-sitter-cli
-        nodejs
-      ]
-      ++ [
-        trash-cli
-        zip
-        tectonic
-        ghostscript
-        mermaid-cli
-      ]
-      ++ [
-        clang
-        libclang
-        clang-tools
-        cmake
-        ninja
-        rustup
-      ]
-      ++ [
-        fzf
-        fd
-        ripgrep
+    extraPackages = with pkgs; [
+      git
+      lazygit
 
-        wget
-        curl
-        wl-clipboard
-        wl-clipboard-x11
-      ];
+      python312
+      lua
+      luarocks
+      luaPackages.tree-sitter-cli
+      nodejs
+
+      trash-cli
+      zip
+      tectonic
+      ghostscript
+      mermaid-cli
+
+      clang
+      libclang
+      clang-tools
+      cmake
+      ninja
+
+      # rust-src
+      # rust-analyzer
+      # rustfmt
+      # cargo
+      # rustc
+      # clippy
+      rustup
+      gcc
+
+      fzf
+      fd
+      ripgrep
+
+      wget
+      curl
+      wl-clipboard
+      wl-clipboard-x11
+    ];
   };
 }
