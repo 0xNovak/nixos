@@ -6,7 +6,6 @@
 }: let
   font = "JetBrainsMono Nerd Font";
   style = "powerline";
-  notification_cmd = "noctalia msg notification-show";
 in {
   options.conf.kitty.enable = lib.mkEnableOption "Enable Kitty";
   config = lib.mkIf config.conf.kitty.enable {
@@ -53,7 +52,7 @@ in {
         name = "run-local-script";
         text = ''
           notify() {
-            notification_cmd "run-local-script" "$1"
+            noctalia msg notification-show "run-local-script" "$1"
           }
 
           if [ $# -lt 1 ]; then
