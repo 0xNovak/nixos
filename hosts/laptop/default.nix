@@ -9,6 +9,7 @@
     ../../modules/desktop.nix
     ../../modules/laptop_services.nix
     ../../modules/fonts.nix
+    ../../modules/gaming.nix
   ];
   networking.hostName = "nixos-port"; # Define your hostname.
 

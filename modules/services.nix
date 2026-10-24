@@ -1,6 +1,7 @@
 {...}: {
   security.rtkit.enable = true;
   services = {
+    flatpak.enable = true;
     printing.enable = true; # cups
     pulseaudio.enable = false;
     pipewire = {

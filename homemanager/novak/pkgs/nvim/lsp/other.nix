@@ -1,5 +1,12 @@
 {
   programs.nvf.settings.vim.languages = {
+    sql = {
+      enable = true;
+      lsp.enable = true;
+      extraDiagnostics.enable = true;
+      format.enable = true;
+      treesitter.enable = true;
+    };
     nix = {
       enable = true;
       lsp.enable = true;
