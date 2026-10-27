@@ -3,7 +3,7 @@
   {
     key = "<leader>bd";
     mode = ["n"];
-    action = "<CMD>bd<CR>";
+    action = "<CMD>Bdelete<CR>";
     silent = true;
     desc = "delete current buffer";
   }

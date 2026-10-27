@@ -31,6 +31,10 @@
   environment.systemPackages = with pkgs; [
     wget
   ];
+  services.printing = {
+    enable = true;
+    drivers = [pkgs.epson-escpr];
+  };
 
   xdg.portal = {
     enable = true;

@@ -37,7 +37,7 @@
       size = 10000;
       ignoreAllDups = true;
       path = "$HOME/.local/state/zsh/history";
-      ignorePatterns = ["rm *" "pkill *" "cp *" "mv *" "git commit -m"];
+      ignorePatterns = ["rm *" "pkill *" "cp *" "mv *" "git commit -m" "gc *" "gcmsg *"];
     };
   };
   programs.zoxide = {
